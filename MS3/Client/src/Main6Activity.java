@@ -23,6 +23,7 @@ public class Main6Activity extends AppCompatActivity {
 
         seekbarr();
 
+        //Die Seite mit den Vorschlägen wird aufgerufen
         Button commitAnswer6 = (Button) findViewById(R.id.commitAnswer6);
         commitAnswer6.setOnClickListener(new View.OnClickListener() {
 
@@ -52,8 +53,11 @@ public class Main6Activity extends AppCompatActivity {
                 });
 
     }
+
+    //Aus den Antworten wird ein neues Objet User erstellt
     public void setUser(){
 
+        //Die Variablen werden mit den ermittelten Werten aus den borherigen Seiten gefüllt
         String name = MainActivity.getName();
         int radius = Main2Activity.getRadius();
         int miete = Main3Activity.getMiete();
@@ -62,13 +66,14 @@ public class Main6Activity extends AppCompatActivity {
         int aktivitaet = Main6Activity.getAktivitaet();
         String typ;
 
+        //Je nachdem ob den User Natur oder Freizeit wichitger ist wird ihm ein Typ zugeordnet
         if (natur > aktivitaet) {
             typ = "Naturmensch";
         }
         else {
             typ = "Aktivitätsmensch";
         }
-
+        //Der User wird erstellt
         User u1 = new User (name, radius, miete, natur, aktivitaeten, aktivitaet, typ);
 
         System.out.println( "Ort: " +u1.getOrtName()  +"\nRadius: " +u1.getRadius()+ "\nMiete: " +u1.getMiete()+ "\nNatur: " +u1.getNatur()+ "\nHobbies: " +u1.getAktivitaeten() +"\nFreizeit: " +u1.getAktivitaet() + "\nTyp: "+ u1.getTyp());

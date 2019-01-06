@@ -17,11 +17,13 @@ public class Main3Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
         seekbarr();
 
+        //Frage 4 wird aufgerufen
         Button commitAnswer3 = (Button) findViewById(R.id.commitAnswer3);
         commitAnswer3.setOnClickListener( new View.OnClickListener() {
 
@@ -36,7 +38,7 @@ public class Main3Activity extends AppCompatActivity {
 
         seekBar3.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
-
+                    //wird der Regler verändert so ändert sich auch die statische Variable miete
                     public void onProgressChanged(SeekBar seekBar3, int progress, boolean fromUser) {
                         miete = progress;
                     }

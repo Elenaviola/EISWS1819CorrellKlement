@@ -18,12 +18,14 @@ public class Main2Activity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
         seekbarr();
 
         Button commitAnswer2 = (Button) findViewById(R.id.commitAnswer2);
+        //Frage 3 wird aufgerufen
         commitAnswer2.setOnClickListener( new View.OnClickListener() {
 
             public void onClick(View v){
@@ -35,11 +37,12 @@ public class Main2Activity extends AppCompatActivity{
     }
 
     public void seekbarr(){
+
         seekBar2 = (SeekBar)findViewById(R.id.seekBar2);
 
         seekBar2.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
-
+                    //wird der Regler verändert so ändert sich auch die statische Variable radius
                     public void onProgressChanged(SeekBar seekBar2, int progress, boolean fromUser) {
                         radius = progress;
                     }
