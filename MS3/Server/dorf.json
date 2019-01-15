@@ -1,0 +1,52 @@
+{ "dorf" : [
+    {
+    "id": 1,
+    "name": "Gummersbach",
+    "naechsteStadt": "Köln",
+    "entfernung": 50,
+    "mietspiegel": 350,
+    "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+    "gruenflaeche": 400,
+    "punkte":0
+    },
+    {
+    "id": 2,
+    "name": "Overath",
+    "naechsteStadt": "Köln",
+    "entfernung": 30,
+    "mietspiegel": 450,
+    "gruenflaeche": 800,
+    "aktivitaeten": ["Fußball", "Reiten", "Schwimmen"],
+    "punkte":0
+    },
+    {
+    "id": 3,
+    "name": "Bergisch Gladbach",
+    "naechsteStadt": "Köln",
+    "entfernung": 30,
+    "mietspiegel": 450,
+    "gruenflaeche": 200,
+    "aktivitaeten": ["Skaten", "Volleyball", "Basketball"],
+    "punkte":0
+    },
+    {
+    "id": 4,
+    "name": "Rosenheim",
+    "naechsteStadt": "München",
+    "entfernung": 30,
+    "mietspiegel": 950,
+    "gruenflaeche": 100,
+    "aktivitaeten": ["Skaten", "Fußball", "Ski"],
+    "punkte":0
+    },
+    {
+    "id": 5,
+    "name": "Potsdam",
+    "naechsteStadt": "Berlin",
+    "entfernung": 40,
+    "mietspiegel": 850,
+    "gruenflaeche": 400,
+    "aktivitaeten": ["Fußball", "Golf", "Schwimmen"],
+    "punkte":0
+    }
+]}

@@ -22,9 +22,12 @@ public class Main2Activity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        //Die Funktion seekbar kümmert sich um die Reglereingabe
+        //Der Wert wird zurückgegeben und in radius gespeichert
         seekbarr();
 
         Button commitAnswer2 = (Button) findViewById(R.id.commitAnswer2);
+
         //Frage 3 wird aufgerufen
         commitAnswer2.setOnClickListener( new View.OnClickListener() {
 
@@ -41,12 +44,13 @@ public class Main2Activity extends AppCompatActivity{
         seekBar2 = (SeekBar)findViewById(R.id.seekBar2);
 
         seekBar2.setOnSeekBarChangeListener(
+
                 new SeekBar.OnSeekBarChangeListener() {
+
                     //wird der Regler verändert so ändert sich auch die statische Variable radius
                     public void onProgressChanged(SeekBar seekBar2, int progress, boolean fromUser) {
                         radius = progress;
                     }
-
                     public void onStartTrackingTouch(SeekBar seekBar2) {
 
                     }

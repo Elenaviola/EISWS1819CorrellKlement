@@ -28,8 +28,6 @@ public class Main5Activity extends AppCompatActivity {
                 EditText aktEingabe1 = (EditText) findViewById(R.id.aktEingabe1);
                 akt = String.valueOf(aktEingabe1.getText());
 
-                System.out.println(akt);
-
                 Intent startIntent = new Intent(getApplicationContext(), Main6Activity.class);
                 startActivity(startIntent);
             }

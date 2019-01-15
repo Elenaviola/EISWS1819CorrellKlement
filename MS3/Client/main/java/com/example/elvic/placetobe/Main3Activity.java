@@ -25,6 +25,7 @@ public class Main3Activity extends AppCompatActivity {
 
         //Frage 4 wird aufgerufen
         Button commitAnswer3 = (Button) findViewById(R.id.commitAnswer3);
+
         commitAnswer3.setOnClickListener( new View.OnClickListener() {
 
             public void onClick(View v){
@@ -37,12 +38,12 @@ public class Main3Activity extends AppCompatActivity {
         seekBar3 = (SeekBar)findViewById(R.id.seekBar3);
 
         seekBar3.setOnSeekBarChangeListener(
+
                 new SeekBar.OnSeekBarChangeListener() {
                     //wird der Regler verändert so ändert sich auch die statische Variable miete
                     public void onProgressChanged(SeekBar seekBar3, int progress, boolean fromUser) {
                         miete = progress;
                     }
-
                     public void onStartTrackingTouch(SeekBar seekBar3) {
 
                     }

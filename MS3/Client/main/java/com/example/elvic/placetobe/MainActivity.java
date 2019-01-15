@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    //statische variable ortName wird erstellt
+    //statische variable ortName zur Übergabe an fillUser() -> Main6Activity
     private static String ortName;
     public static String getName(){
         return ortName;
@@ -18,26 +18,28 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Button definieren
+        //Button zur nächsten Frage
         Button commitAnswer1 = (Button) findViewById(R.id.commitAnswer1);
-        //Funktion: wenn der Button geklickt wird
+
         commitAnswer1.setOnClickListener( new View.OnClickListener() {
 
             public void onClick(View v){
 
-                //der statischen Variable wird die Benutzereingabe ins Textfeld zugewiesen
+                //ortName wird die Benutzereingabe zugewiesen
                 EditText ortEingabe = (EditText) findViewById(R.id.ortEingabe);
                 ortName = String.valueOf(ortEingabe.getText());
-                //Die nächste Seite (Frage 2 wird aufgerufen)
+
+                //Frage 2 wird aufgerugen
                 Intent startIntent = new Intent(getApplicationContext(), Main2Activity.class);
                 startActivity(startIntent);
             }
         });
 
-        // TODO Fortschritt anzeigen (Frage 2/6)
+        // TODO Fortschritt anzeigen
 
     }
 }
