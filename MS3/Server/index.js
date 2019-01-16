@@ -31,7 +31,6 @@ var Userwish = {
   Dorf : ['','','']
 };
 
-
 app.post ('/userwish', function (req,res){
 
   var name = req.body.ortName;
@@ -41,36 +40,44 @@ app.post ('/userwish', function (req,res){
   var typ = req.body.typ;
 
   for (i=0; i<dorf.dorf.length; i++){
-      if (dorf.dorf[i].naechsteStadt == name && dorf.dorf[i].entfernung <= radius){
-          result.push(dorf.dorf[i].name);
-        }  
-   }
-    /*
-    if (dorf.dorf[i].gruenflaeche > 200) {
-      if (typ == "Naturtyp"){
-        dorf.dorf[i].punkte+=100;
-      } else {
-        dorf.dorf[i].punkte+=50;
-      }
-    } if (dorf.dorf[i].miete - miete <= 50){
-      if (typ == "Aktivitaetstyp"){
-        dorf.dorf[i].punkte+=100;
-      } else {
-        dorf.dorf[i].punkte+=50;
-      }
-    } for (j=0; j<dorf.dorf[i].aktivitaeten[j]; j++){
-        if (dorf.dorf[i].aktivitaeten[j]==aktivitaeten){
+    for(j=0; j<dorf.dorf[i].mapDaten.length; j++){
+      if (dorf.dorf[i].mapDaten[j].naechsteStadt == name && dorf.dorf[i].mapDaten[j].entfernung <= radius ) {
+
+        if (dorf.dorf[i].natur.gruenflaeche > 200) {
+          console.log("1");
+          if (typ == "Natur"){
+            dorf.dorf[i].punkte+=100;
+          } else {
+            dorf.dorf[i].punkte+=50;
+          }
+        } else if ((dorf.dorf[i].allgemeineInfos.miete - miete) >= 50){
+
+          if (typ == "Miete"){
+            dorf.dorf[i].punkte+=100;
+            console.log(dorf.dorf[i].punkte);
+            console.log("2");
+          } else {
+            dorf.dorf[i].punkte+=50;
+        }
+        } /*for (j=0; j<dorf.dorf[i].aktivitaeten.length; j++){
+        console.log("2");
+        if (dorf.dorf[i].aktivitaeten[j]== aktivitaeten){
           dorf.dorf[i].punkte+=500;
+          console.log("3");
           console.log(dorf.dorf[i].punkte);
         }
-    } 
+      } */
+    }
+  }
+}
+
+  for (m=0; m<dorf.dorf[m].length; m++){
+    console.log("4");
+    if (dorf.dorf[m].punte <= dorf.dorf[m+1].punkte){
+      result.push(dorf.dorf[m].name);
+    }
   }
 
-  for (l=0; l<dorf.dorf[l].length; l++){
-    if (dorf.dorf[l].punte <= dorf.dorf[l+1].punkte){
-      result.push(dorf.dorf[l].name);
-    }
-  }*/
   
   console.log(result);
   res.send(result);

@@ -1,52 +1,277 @@
-{ "dorf" : [
+{ "dorf": [
+   
     {
-    "id": 1,
-    "name": "Gummersbach",
-    "naechsteStadt": "Köln",
-    "entfernung": 50,
-    "mietspiegel": 350,
-    "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
-    "gruenflaeche": 400,
-    "punkte":0
-    },
+        "id": 1,
+        "mapDaten":[
+            {
+            "naechsteStadt": "Köln",
+            "entfernung": 55
+            },
+            {
+            "naechsteStadt": "Siegen",
+            "entfernung": 45
+            }
+        ],
+        "allgemeineInfos": 
+            {
+            "name": "Gummersbach",
+            "bundesland": "NRW",
+            "region": "Oberbergischer Kreis",
+            "einwohnerzahl": 50500,
+            "bevölkerungsdichte": 529,
+            "mietspiegel": 617
+            },
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "natur": 
+            {
+            "gruenflaeche": 400,
+            "natur": ["Aggerthalsperre"]
+            },
+        "punkte":0
+        },
+
     {
-    "id": 2,
-    "name": "Overath",
-    "naechsteStadt": "Köln",
-    "entfernung": 30,
-    "mietspiegel": 450,
-    "gruenflaeche": 800,
-    "aktivitaeten": ["Fußball", "Reiten", "Schwimmen"],
-    "punkte":0
-    },
+        "id": 2,
+        "mapDaten":[
+            {
+            "naechsteStadt": "Köln",
+            "entfernung": 35
+            },
+            {
+            "naechsteStadt": "Siegen",
+            "entfernung": 65
+            }
+        ],
+        "allgemeineInfos": 
+            {
+            "name": "Lindlar",
+            "bundesland": "NRW",
+            "region": "Oberbergischer Kreis",
+            "einwohnerzahl": 21500,
+            "bevölkerungsdichte": 251,
+            "mietspiegel": 600
+            },
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "natur": 
+            {
+            "gruenflaeche": 400,
+            "natur": ["Aggerthalsperre"]
+            },
+        "punkte":0
+        },
+
     {
-    "id": 3,
-    "name": "Bergisch Gladbach",
-    "naechsteStadt": "Köln",
-    "entfernung": 30,
-    "mietspiegel": 450,
-    "gruenflaeche": 200,
-    "aktivitaeten": ["Skaten", "Volleyball", "Basketball"],
-    "punkte":0
-    },
+        "id": 3,
+        "mapDaten":[
+            {
+            "naechsteStadt": "Köln",
+            "entfernung": 30
+            },
+            {
+            "naechsteStadt": "Bonn",
+            "entfernung": 16
+            }
+        ],
+        "allgemeineInfos": 
+            {
+            "name": "Siegburg",
+            "bundesland": "NRW",
+            "region": "Rhein Sieg Kreis",
+            "einwohnerzahl": 41326,
+            "bevölkerungsdichte": 1762,
+            "mietspiegel": 850
+            },
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "natur": 
+            {
+            "gruenflaeche": 400,
+            "natur": ["Aggerthalsperre"]
+            },
+        "punkte":0
+        },
+
     {
-    "id": 4,
-    "name": "Rosenheim",
-    "naechsteStadt": "München",
-    "entfernung": 30,
-    "mietspiegel": 950,
-    "gruenflaeche": 100,
-    "aktivitaeten": ["Skaten", "Fußball", "Ski"],
-    "punkte":0
-    },
+        "id": 4,
+        "mapDaten":
+            {
+            "naechsteStadt": "Köln",
+            "entfernung": 18
+            },
+        "allgemeineInfos": 
+            {
+            "name": "Bergisch Gladbach",
+            "bundesland": "NRW",
+            "region": "Rhein Bergischer Kreis",
+            "einwohnerzahl": 111630,
+            "bevölkerungsdichte": 1343,
+            "mietspiegel": 950
+            },
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "natur": 
+            {
+            "gruenflaeche": 400,
+            "natur": ["Aggerthalsperre"]
+            },
+        "punkte":0
+        },
+
     {
-    "id": 5,
-    "name": "Potsdam",
-    "naechsteStadt": "Berlin",
-    "entfernung": 40,
-    "mietspiegel": 850,
-    "gruenflaeche": 400,
-    "aktivitaeten": ["Fußball", "Golf", "Schwimmen"],
-    "punkte":0
-    }
+        "id": 5,
+        "mapDaten":
+            {
+            "naechsteStadt": "Köln",
+            "entfernung": 41
+            },
+        "allgemeineInfos": 
+            {
+            "name": "Bergheim",
+            "bundesland": "NRW",
+            "region": "Rhein Erft Kreis",
+            "einwohnerzahl": 61000,
+            "bevölkerungsdichte": 634,
+            "mietspiegel": 730
+            },
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "natur": 
+            {
+            "gruenflaeche": 400,
+            "natur": ["Aggerthalsperre"]
+            },
+        "punkte":0
+        },
+
+    {
+        "id": 6,
+        "mapDaten":
+            {
+            "naechsteStadt": "München",
+            "entfernung": 50
+            },
+        "allgemeineInfos": 
+            {
+            "name": "Wasserburg",
+            "bundesland": "BY",
+            "region": "Rosenheim",
+            "einwohnerzahl": 12770,
+            "bevölkerungsdichte": 679,
+            "mietspiegel": 910
+            },
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "natur": 
+            {
+            "gruenflaeche": 400,
+            "natur": ["Inn", "Chiemsee"]
+            },
+        "punkte":0
+        },
+    {
+        "id": 7,
+        "mapDaten":[
+            {
+            "naechsteStadt": "Köln",
+            "entfernung": 27
+            },
+            {
+            "naechsteStadt": "Düsseldorf",
+            "entfernung": 24
+            }
+        ],
+        "allgemeineInfos": 
+            {
+            "name": "Monheim",
+            "bundesland": "NRW",
+            "region": "Mettmann",
+            "einwohnerzahl": 40600,
+            "bevölkerungsdichte": 1762,
+            "mietspiegel": 840
+            },
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "natur": 
+            {
+            "gruenflaeche": 400,
+            "natur": ["Aggerthalsperre"]
+            },
+        "punkte":0
+        },
+
+    {
+        "id": 8,
+        "mapDaten":[
+            {
+            "naechsteStadt": "Köln",
+            "entfernung": 10
+            },
+            {
+            "naechsteStadt": "Bonn",
+            "entfernung": 29
+            }
+        ],
+        "allgemeineInfos": 
+            {
+            "name": "Hürth",
+            "bundesland": "NRW",
+            "region": "Rhein Erft Kreis",
+            "einwohnerzahl": 59760,
+            "bevölkerungsdichte": 1167,
+            "mietspiegel": 990
+            },
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "natur": 
+            {
+            "gruenflaeche": 400,
+            "natur": ["Aggerthalsperre"]
+            },
+        "punkte":0
+        },
+
+    {
+        "id": 9,
+        "mapDaten":
+            {
+            "naechsteStadt": "Köln",
+            "entfernung": 12
+            },
+        "allgemeineInfos": 
+            {
+            "name": "Lövenich",
+            "bundesland": "NRW",
+            "region": "Köln",
+            "einwohnerzahl": 9067,
+            "bevölkerungsdichte": 2456,
+            "mietspiegel": 1000
+            },
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "natur": 
+            {
+            "gruenflaeche": 400,
+            "natur": ["Aggerthalsperre"]
+            },
+        "punkte":0
+        },
+    {
+        "id": 10,
+        "mapDaten":
+            {
+            "naechsteStadt": "Eisleben",
+            "entfernung": 15
+            },
+        "allgemeineInfos": 
+            {
+            "name": "Mansfeld",
+            "bundesland": "ST",
+            "region": "Mansfeld-Südharz",
+            "einwohnerzahl": 8845,
+            "bevölkerungsdichte": 62,
+            "mietspiegel": 450
+            },
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "natur": 
+            {
+            "gruenflaeche": 400,
+            "natur": ["Aggerthalsperre"]
+            },
+        "punkte":0
+        }
+    
+  
 ]}
