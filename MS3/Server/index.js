@@ -42,7 +42,9 @@ app.post ('/userwish', function (req,res){
   for (i=0; i<dorf.dorf.length; i++){
     for(j=0; j<dorf.dorf[i].mapDaten.length; j++){
       if (dorf.dorf[i].mapDaten[j].naechsteStadt == name && dorf.dorf[i].mapDaten[j].entfernung <= radius ) {
+          result.push(dorf.dorf[i]);
 
+        /*
         if (dorf.dorf[i].natur.gruenflaeche > 200) {
           console.log("1");
           if (typ == "Natur"){
@@ -69,14 +71,14 @@ app.post ('/userwish', function (req,res){
       } */
     }
   }
-}
-
+  }
+/*
   for (m=0; m<dorf.dorf[m].length; m++){
     console.log("4");
     if (dorf.dorf[m].punte <= dorf.dorf[m+1].punkte){
       result.push(dorf.dorf[m].name);
     }
-  }
+  }*/
 
   
   console.log(result);
