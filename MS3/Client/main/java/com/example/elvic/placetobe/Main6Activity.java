@@ -106,7 +106,7 @@ public class Main6Activity extends AppCompatActivity {
                 }.execute();
 
                 //nächste Seite wird aufgerufen
-                Intent startIntent = new Intent(getApplicationContext(), CardOverview.class);
+                Intent startIntent = new Intent(getApplicationContext(), Main7Activity.class);
                 startActivity(startIntent);
             }
         });
@@ -145,9 +145,11 @@ public class Main6Activity extends AppCompatActivity {
 
         //Je nachdem ob den User Natur oder Freizeit wichitger ist wird ihm ein Typ zugeordnet
         if (natur > aktivitaet) {
-            typ = "Naturmensch";
+            typ = "Natur";
+        } else if (miete < 600) {
+            typ = "Miete";
         } else {
-            typ = "Aktivitätsmensch";
+            typ = "Aktivitaet";
         }
 
         //Ein Objekt u1 der Klasse User wird erstellt

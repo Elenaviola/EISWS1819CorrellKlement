@@ -10,6 +10,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
 
     <application
         android:allowBackup="true"
@@ -30,8 +32,8 @@
         <activity android:name=".Main4Activity" />
         <activity android:name=".Main5Activity" />
         <activity android:name=".Main6Activity" />
-        <activity android:name=".CardOverview" />
-        <activity android:name=".CityOverview" />
+        <activity android:name=".Main7Activity" />
+        <activity android:name=".Main8Activity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -42,11 +44,15 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyA1e2RxZrtEKaGMh9fahVDV4vXYwGmTWNE" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".CardOverviewTest"
+            android:name=".MainMapActivity"
             android:label="@string/title_activity_card_overview_test"></activity>
+
     </application>
 
 </manifest>
