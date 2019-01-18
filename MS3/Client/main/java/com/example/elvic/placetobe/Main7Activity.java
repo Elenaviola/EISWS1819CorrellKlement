@@ -59,7 +59,7 @@ public class Main7Activity extends AppCompatActivity {
             overview.setOnClickListener( new View.OnClickListener() {
 
                 public void onClick(View v){
-                    Intent intent = new Intent(Main7Activity.this, com.example.elvic.placetobe.Main8Activity.class);
+                    Intent intent = new Intent(Main7Activity.this, com.example.elvic.placetobe.DorfA.class);
                     startActivity(intent);
                 }
             });

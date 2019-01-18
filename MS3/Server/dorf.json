@@ -21,13 +21,12 @@
             "bevölkerungsdichte": 529,
             "mietspiegel": 617
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
         "natur": 
             {
-            "gruenflaeche": 400,
-            "natur": ["Aggerthalsperre"]
-            },
-        "punkte":0
+            "gruenflaeche": 100,
+            "natur": ["Aggerthalsperre", "TH Wiese"]
+            }
         },
 
     {
@@ -51,13 +50,12 @@
             "bevölkerungsdichte": 251,
             "mietspiegel": 600
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
         "natur": 
             {
-            "gruenflaeche": 400,
+            "gruenflaeche": 200,
             "natur": ["Aggerthalsperre"]
-            },
-        "punkte":0
+            }
         },
 
     {
@@ -81,13 +79,12 @@
             "bevölkerungsdichte": 1762,
             "mietspiegel": 850
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
         "natur": 
             {
-            "gruenflaeche": 400,
+            "gruenflaeche": 300,
             "natur": ["Aggerthalsperre"]
-            },
-        "punkte":0
+            }
         },
 
     {
@@ -106,13 +103,12 @@
             "bevölkerungsdichte": 1343,
             "mietspiegel": 950
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
         "natur": 
             {
             "gruenflaeche": 400,
             "natur": ["Aggerthalsperre"]
-            },
-        "punkte":0
+            }
         },
 
     {
@@ -131,13 +127,12 @@
             "bevölkerungsdichte": 634,
             "mietspiegel": 730
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
         "natur": 
             {
-            "gruenflaeche": 400,
+            "gruenflaeche": 500,
             "natur": ["Aggerthalsperre"]
-            },
-        "punkte":0
+            }
         },
 
     {
@@ -156,13 +151,12 @@
             "bevölkerungsdichte": 679,
             "mietspiegel": 910
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
         "natur": 
             {
-            "gruenflaeche": 400,
+            "gruenflaeche": 600,
             "natur": ["Inn", "Chiemsee"]
-            },
-        "punkte":0
+            }
         },
     {
         "id": 7,
@@ -185,13 +179,12 @@
             "bevölkerungsdichte": 1762,
             "mietspiegel": 840
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
         "natur": 
             {
-            "gruenflaeche": 400,
+            "gruenflaeche": 700,
             "natur": ["Aggerthalsperre"]
-            },
-        "punkte":0
+            }
         },
 
     {
@@ -215,13 +208,12 @@
             "bevölkerungsdichte": 1167,
             "mietspiegel": 990
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
         "natur": 
             {
-            "gruenflaeche": 400,
+            "gruenflaeche": 800,
             "natur": ["Aggerthalsperre"]
-            },
-        "punkte":0
+            }
         },
 
     {
@@ -240,13 +232,12 @@
             "bevölkerungsdichte": 2456,
             "mietspiegel": 1000
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
         "natur": 
             {
-            "gruenflaeche": 400,
+            "gruenflaeche": 900,
             "natur": ["Aggerthalsperre"]
-            },
-        "punkte":0
+            }
         },
     {
         "id": 10,
@@ -264,13 +255,12 @@
             "bevölkerungsdichte": 62,
             "mietspiegel": 450
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen"],
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
         "natur": 
             {
-            "gruenflaeche": 400,
+            "gruenflaeche": 1000,
             "natur": ["Aggerthalsperre"]
-            },
-        "punkte":0
+            }
         }
     
   

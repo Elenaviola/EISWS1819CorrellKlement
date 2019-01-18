@@ -1,6 +1,7 @@
 package com.example.elvic.placetobe;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -16,6 +17,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -44,6 +46,7 @@ public class MainMapActivity extends AppCompatActivity implements OnMapReadyCall
         mMap = googleMap;
 
         if (mLocationPermissionGRANTED) {
+
             getDeviceLocation();
 
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
@@ -60,13 +63,15 @@ public class MainMapActivity extends AppCompatActivity implements OnMapReadyCall
         }
     }
 
+    int radius = Main2Activity.getRadius();
+    String sucheOrt = Main1Activity.getName();
 
     private static final String TAG = "MainMapActivity";
 
     private static final String Fine_Location = Manifest.permission.ACCESS_FINE_LOCATION;
     private static final String COARSE_Location = Manifest.permission.ACCESS_COARSE_LOCATION;
     private static final int Location_Permission_REQUEST_CODE = 20119;
-    private static final float Default_Zoom = 15f;
+    private static final float Default_Zoom = 12;
 
     //widgets
     private EditText mSearchText;
@@ -79,10 +84,48 @@ public class MainMapActivity extends AppCompatActivity implements OnMapReadyCall
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_map);
         mSearchText = (EditText) findViewById(R.id.input_search);
         mGps = (ImageView) findViewById(R.id.ic_gps);
         getLocationPermission();
+
+        // MapviewA MapviewA = (MapviewA) findViewById(R.id.MapviewA);
+
+        Button buttonA = (Button) findViewById(R.id.buttonA);
+        buttonA.setText(Main6Activity.getOrtNameA());
+        Button buttonB = (Button) findViewById(R.id.buttonB);
+        buttonB.setText(Main6Activity.getOrtNameB());
+        Button buttonC = (Button) findViewById(R.id.buttonC);
+        buttonC.setText(Main6Activity.getOrtNameC());
+
+        buttonA.setOnClickListener( new View.OnClickListener() {
+            public void onClick(View v){
+                Intent startIntent = new Intent(getApplicationContext(), DorfA.class);
+                startActivity(startIntent);
+            }
+        });
+
+        /*MapviewA.setOnClickListener( new View.OnClickListener() {
+            public void onClick(View v){
+                Intent startIntent = new Intent(getApplicationContext(), DorfA.class);
+                startActivity(startIntent);
+            }
+        });
+*/
+        buttonB.setOnClickListener( new View.OnClickListener() {
+            public void onClick(View v){
+                Intent startIntent = new Intent(getApplicationContext(), DorfB.class);
+                startActivity(startIntent);
+            }
+        });
+
+        buttonC.setOnClickListener( new View.OnClickListener() {
+            public void onClick(View v){
+                Intent startIntent = new Intent(getApplicationContext(), DorfC.class);
+                startActivity(startIntent);
+            }
+        });
 
     }
 
@@ -90,6 +133,7 @@ public class MainMapActivity extends AppCompatActivity implements OnMapReadyCall
     // Es gab Probleme beim Button drüken also wurde eine alternative genommen und sicher zu stellen das es geht
     private void init() {
         Log.d(TAG, "init: initalizierung");
+        geoLocate();
 
         mSearchText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -117,7 +161,8 @@ public class MainMapActivity extends AppCompatActivity implements OnMapReadyCall
 
     private void geoLocate() {
         Log.d(TAG, "geoLocate: geoLocating");
-        String searchString = mSearchText.getText().toString();
+        //String searchString = mSearchText.getText().toString();
+        String searchString = sucheOrt;
         Geocoder geocoder = new Geocoder(com.example.elvic.placetobe.MainMapActivity.this);
         List<Address> list = new ArrayList<>();
         // Liste gib nur einen Standort aus muss auf drei hochgesettet werden

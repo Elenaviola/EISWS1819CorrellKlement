@@ -21,78 +21,116 @@ var dorf = JSON.parse(data);
 
 var result = [];
 
-var Userwish = {
-  id : 1,
-  Stadt :'',
-  Radius : 1,
-  Miete : 1,
-  Aktivitaeten : [''],
-  Typ : '',
-  Dorf : ['','','']
-};
+//var finalResult = [];
 
 app.post ('/userwish', function (req,res){
 
+  result.length = 0;
+
+  console.log("Der Client hat ein POST Request gesendet");
   var name = req.body.ortName;
   var miete = req.body.miete;
   var radius = req.body.radius;
-  var aktivitaeten = req.body.aktivitaten;
+  var aktivitaeten = req.body.aktivitaeten;
   var typ = req.body.typ;
 
   for (i=0; i<dorf.dorf.length; i++){
     for(j=0; j<dorf.dorf[i].mapDaten.length; j++){
-      if (dorf.dorf[i].mapDaten[j].naechsteStadt == name && dorf.dorf[i].mapDaten[j].entfernung <= radius ) {
-          result.push(dorf.dorf[i]);
+      if (dorf.dorf[i].mapDaten[j].naechsteStadt == name && dorf.dorf[i].mapDaten[j].entfernung <= radius && 
+        dorf.dorf[i].allgemeineInfos.mietspiegel <= miete) {
 
-        /*
-        if (dorf.dorf[i].natur.gruenflaeche > 200) {
-          console.log("1");
-          if (typ == "Natur"){
-            dorf.dorf[i].punkte+=100;
-          } else {
-            dorf.dorf[i].punkte+=50;
+          for(l=0; l<dorf.dorf[i].aktivitaeten.length; l++){
+            if (dorf.dorf[i].aktivitaeten[l] == aktivitaeten){
+              result.push(dorf.dorf[i]);
+            }
           }
-        } else if ((dorf.dorf[i].allgemeineInfos.miete - miete) >= 50){
-
-          if (typ == "Miete"){
-            dorf.dorf[i].punkte+=100;
-            console.log(dorf.dorf[i].punkte);
-            console.log("2");
-          } else {
-            dorf.dorf[i].punkte+=50;
-        }
-        } /*for (j=0; j<dorf.dorf[i].aktivitaeten.length; j++){
-        console.log("2");
-        if (dorf.dorf[i].aktivitaeten[j]== aktivitaeten){
-          dorf.dorf[i].punkte+=500;
-          console.log("3");
-          console.log(dorf.dorf[i].punkte);
-        }
-      } */
+      }
     }
   }
-  }
-/*
-  for (m=0; m<dorf.dorf[m].length; m++){
-    console.log("4");
-    if (dorf.dorf[m].punte <= dorf.dorf[m+1].punkte){
-      result.push(dorf.dorf[m].name);
-    }
-  }*/
+  console.log(result.length);
 
-  
-  console.log(result);
-  res.send(result);
+  if (typ == "Natur" && result.length >1){ res.send(selectionSortNatur(result)); }
+  if (typ == "Miete" && result.length >1){ res.send(selectionSortMiete(result)); }
+  if (typ == "Aktivitaet" && result.length>1){ res.send(selectionSortAktivitaet(result)); }
+
 });
+
+function selectionSortNatur (result){
+    
+    var i, j,  minIx, minVal;
+    var ergebnis = [];
+
+    for (i=0; i<result.length; ++i){
+      //console.log(result[i].natur.gruenflaeche);
+      minVal = result[minIx=i].natur.gruenflaeche;
+      for (j= i+1; j<result.length; j++){
+        result[j].natur.gruenflaeche < minVal && (minVal = result[minIx = j].natur.gruenflaeche);
+        temp = result[i];
+        result[i] = result[minIx];
+        result[minIx] = temp;
+      }
+    }
+    
+    ergebnis[0] = result[result.length-1];
+    ergebnis[1] = result[result.length-2];
+    ergebnis[2] = result[result.length-3];
+
+    //console.log(ergebnis);
+    return ergebnis;
+}
+
+function selectionSortMiete (result){
+    
+  var i, j, minIx, minVal;
+  var ergebnis = [];
+
+  for (i=0; i<result.length; ++i){
+    //console.log(result[i].allgemeineInfos.mietspiegel);
+    minVal = result[minIx=i].allgemeineInfos.mietspiegel;
+    for (j= i+1; j<result.length; j++){
+      result[j].allgemeineInfos.mietspiegel < minVal && (minVal = result[minIx = j].allgemeineInfos.mietspiegel);
+      temp = result[i];
+      result[i] = result[minIx];
+      result[minIx] = temp;
+    }
+  }
+  
+  ergebnis[0] = result[0];
+  ergebnis[1] = result[1];
+  ergebnis[2] = result[2];
+
+  //console.log(ergebnis);
+  return ergebnis;
+}
+
+function selectionSortAktivitaet (result){
+    
+  var i, j,  minIx, minVal;
+  var ergebnis = [];
+
+  for (i=0; i<result.length; ++i){
+    //console.log(result[i].aktivitaeten.length);
+    minVal = result[minIx=i].aktivitaeten.length;
+    for (j= i+1; j<result.length; j++){
+      result[j].aktivitaeten.length < minVal && (minVal = result[minIx = j].aktivitaeten.length);
+      temp = result[i];
+      result[i] = result[minIx];
+      result[minIx] = temp;
+    }
+  }
+  
+  ergebnis[0] = result[result.length-1];
+  ergebnis[1] = result[result.length-2];
+  ergebnis[2] = result[result.length-3];
+
+  //console.log(ergebnis);
+  return ergebnis;
+}
+
 
 app.get ('/dorf', function (req,res){
   res.json(dorf);
 });
 
-app.get ('/userwish/dorf', function (req, res) {
-  
-  console.log("getrequest");
-  res.send(result);
-  
-});
+
 

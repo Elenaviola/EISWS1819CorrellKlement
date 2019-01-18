@@ -37,6 +37,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
+
+
+    private static final String TAG = "MapActivity";
+
+    private static final String Fine_Location = Manifest.permission.ACCESS_FINE_LOCATION;
+    private static final String COARSE_Location = Manifest.permission.ACCESS_COARSE_LOCATION;
+    private static final int Location_Permission_REQUEST_CODE = 20119;
+    private static final float Default_Zoom = 30f;
+
+    //widgets
+    private EditText mSearchText;
+    private ImageView mGps;
+    //vars
+    private Boolean mLocationPermissionGRANTED = false;
+    private GoogleMap mMap;
+    private FusedLocationProviderClient mFusedLocationProviderClient;
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_map);
+
+        mSearchText = (EditText) findViewById(R.id.input_search);
+        mGps = (ImageView) findViewById(R.id.ic_gps);
+        getLocationPermission();
+
+
+
+    }
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         Toast.makeText(this, "Karte kann geladen werden", Toast.LENGTH_SHORT).show();
@@ -61,34 +92,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     }
 
 
-    private static final String TAG = "MapActivity";
-
-    private static final String Fine_Location = Manifest.permission.ACCESS_FINE_LOCATION;
-    private static final String COARSE_Location = Manifest.permission.ACCESS_COARSE_LOCATION;
-    private static final int Location_Permission_REQUEST_CODE = 20119;
-    private static final float Default_Zoom = 15f;
-
-    //widgets
-    private EditText mSearchText;
-    private ImageView mGps;
-    //vars
-    private Boolean mLocationPermissionGRANTED = false;
-    private GoogleMap mMap;
-    private FusedLocationProviderClient mFusedLocationProviderClient;
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
-
-
-        mSearchText = (EditText) findViewById(R.id.input_search);
-        mGps = (ImageView) findViewById(R.id.ic_gps);
-        getLocationPermission();
-
-
-    }
-
     // Enter button wird ausgenommen man kann eifach jetzt auf die Tastatur enter klicken
     // Es gab Probleme beim Button drüken also wurde eine alternative genommen und sicher zu stellen das es geht
     private void init() {
@@ -109,6 +112,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         });
         hideSoftKeyboard();
         // Zurück zu Unsere Position
+
         mGps.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
