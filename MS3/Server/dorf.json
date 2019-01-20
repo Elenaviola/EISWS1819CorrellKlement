@@ -21,12 +21,13 @@
             "bevölkerungsdichte": 529,
             "mietspiegel": 617
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", "Salsa", ""],
         "natur": 
             {
             "gruenflaeche": 100,
-            "natur": ["Aggerthalsperre", "TH Wiese"]
-            }
+            "natur": ["Aggerthalsperre", "Wiehl"]
+            },
+        "anzahl": 0
         },
 
     {
@@ -50,13 +51,15 @@
             "bevölkerungsdichte": 251,
             "mietspiegel": 600
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
+        "aktivitaeten": ["Basketball", "Tennis", "Golf", ""],
         "natur": 
             {
             "gruenflaeche": 200,
             "natur": ["Aggerthalsperre"]
-            }
+            },
+        "anzahl": 0
         },
+        
 
     {
         "id": 3,
@@ -84,7 +87,8 @@
             {
             "gruenflaeche": 300,
             "natur": ["Aggerthalsperre"]
-            }
+            },
+        "anzahl": 0
         },
 
     {
@@ -103,12 +107,13 @@
             "bevölkerungsdichte": 1343,
             "mietspiegel": 950
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
+        "aktivitaeten": [ "Tennis", ""],
         "natur": 
             {
             "gruenflaeche": 400,
             "natur": ["Aggerthalsperre"]
-            }
+            },
+        "anzahl": 0
         },
 
     {
@@ -127,12 +132,13 @@
             "bevölkerungsdichte": 634,
             "mietspiegel": 730
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
+        "aktivitaeten": ["Leichtatlethik", "Tennis", "Schwimmen", ""],
         "natur": 
             {
             "gruenflaeche": 500,
             "natur": ["Aggerthalsperre"]
-            }
+            },
+        "anzahl": 0
         },
 
     {
@@ -151,12 +157,13 @@
             "bevölkerungsdichte": 679,
             "mietspiegel": 910
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
+        "aktivitaeten": ["Basketball", "Fußball", ""],
         "natur": 
             {
             "gruenflaeche": 600,
             "natur": ["Inn", "Chiemsee"]
-            }
+            },
+        "anzahl": 0
         },
     {
         "id": 7,
@@ -179,12 +186,13 @@
             "bevölkerungsdichte": 1762,
             "mietspiegel": 840
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
+        "aktivitaeten": ["Klettern", "Handball", ""],
         "natur": 
             {
             "gruenflaeche": 700,
             "natur": ["Aggerthalsperre"]
-            }
+            },
+        "anzahl": 0
         },
 
     {
@@ -208,12 +216,13 @@
             "bevölkerungsdichte": 1167,
             "mietspiegel": 990
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
+        "aktivitaeten": ["Tennis", "Handball", "Schwimmen", ""],
         "natur": 
             {
             "gruenflaeche": 800,
             "natur": ["Aggerthalsperre"]
-            }
+            },
+        "anzahl": 0
         },
 
     {
@@ -232,12 +241,13 @@
             "bevölkerungsdichte": 2456,
             "mietspiegel": 1000
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
+        "aktivitaeten": ["Handball", ""],
         "natur": 
             {
             "gruenflaeche": 900,
             "natur": ["Aggerthalsperre"]
-            }
+            },
+        "anzahl": 0
         },
     {
         "id": 10,
@@ -255,13 +265,132 @@
             "bevölkerungsdichte": 62,
             "mietspiegel": 450
             },
-        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", ""],
+        "aktivitaeten": ["Tennis", "Handball", "Schwimmen", ""],
         "natur": 
             {
             "gruenflaeche": 1000,
+            "natur": ["Harz"]
+            },
+        "anzahl": 0
+        },
+     {
+        "id": 11,
+        "mapDaten":
+            {
+            "naechsteStadt": "Köln",
+            "entfernung": 20
+            },
+        "allgemeineInfos": 
+            {
+            "name": "Frechen",
+            "bundesland": "NRW",
+            "region": "Köln",
+            "einwohnerzahl": 8845,
+            "bevölkerungsdichte": 62,
+            "mietspiegel": 950
+            },
+        "aktivitaeten": ["Fußball", "Handball", "Tennis", ""],
+        "natur": 
+            {
+            "gruenflaeche": 50,
             "natur": ["Aggerthalsperre"]
             }
+    },
+    {
+        "id": 12,
+        "mapDaten":
+            {
+            "naechsteStadt": "Köln",
+            "entfernung": 30
+            },
+        "allgemeineInfos": 
+            {
+            "name": "Overath",
+            "bundesland": "NRW",
+            "region": "Oberbergischer Kreis",
+            "einwohnerzahl": 8845,
+            "bevölkerungsdichte": 62,
+            "mietspiegel": 850
+            },
+        "aktivitaeten": ["Fußball", "Handball", "Schwimmen", "Tennis", "Golf", "Klettern", ""],
+        "natur": 
+            {
+            "gruenflaeche": 40,
+            "natur": ["Aggerthalsperre"]
+            },
+        "anzahl": 0
+    },
+    {
+        "id": 13,
+        "mapDaten":
+            {
+            "naechsteStadt": "Köln",
+            "entfernung": 40
+            },
+        "allgemeineInfos": 
+            {
+            "name": "Engelskirchen",
+            "bundesland": "NRW",
+            "region": "Oberbergischer Kreis",
+            "einwohnerzahl": 8845,
+            "bevölkerungsdichte": 62,
+            "mietspiegel": 750
+            },
+        "aktivitaeten": ["Fußball", "Klettern", "Schwimmen", ""],
+        "natur": 
+            {
+            "gruenflaeche": 30,
+            "natur": ["Aggerthalsperre"]
+            },
+        "anzahl": 0
+    },
+    {
+        "id": 14,
+        "mapDaten":
+            {
+            "naechsteStadt": "Köln",
+            "entfernung": 20
+            },
+        "allgemeineInfos": 
+            {
+            "name": "Rösrath",
+            "bundesland": "NRW",
+            "region": "Köln",
+            "einwohnerzahl": 8845,
+            "bevölkerungsdichte": 62,
+            "mietspiegel": 650
+            },
+        "aktivitaeten": ["Fußball", "Handball", "Skaten", ""],
+        "natur": 
+            {
+            "gruenflaeche": 20,
+            "natur": ["Aggerthalsperre"]
+            },
+        "anzahl": 0
+    },
+    {
+        "id": 15,
+        "mapDaten":
+            {
+            "naechsteStadt": "München",
+            "entfernung": 30
+            },
+        "allgemeineInfos": 
+            {
+            "name": "Rosenheim",
+            "bundesland": "BY",
+            "region": "Rosenheim",
+            "einwohnerzahl": 8845,
+            "bevölkerungsdichte": 62,
+            "mietspiegel": 550
+            },
+        "aktivitaeten": ["Ski", "Skaten", ""],
+        "natur": 
+            {
+            "gruenflaeche": 10,
+            "natur": ["Alpen"]
+            },
+        "anzahl": 0
         }
-    
   
 ]}

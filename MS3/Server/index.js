@@ -21,13 +21,12 @@ var dorf = JSON.parse(data);
 
 var result = [];
 
-//var finalResult = [];
-
 app.post ('/userwish', function (req,res){
 
   result.length = 0;
 
   console.log("Der Client hat ein POST Request gesendet");
+
   var name = req.body.ortName;
   var miete = req.body.miete;
   var radius = req.body.radius;
@@ -61,8 +60,8 @@ function selectionSortNatur (result){
     var ergebnis = [];
 
     for (i=0; i<result.length; ++i){
-      //console.log(result[i].natur.gruenflaeche);
       minVal = result[minIx=i].natur.gruenflaeche;
+      
       for (j= i+1; j<result.length; j++){
         result[j].natur.gruenflaeche < minVal && (minVal = result[minIx = j].natur.gruenflaeche);
         temp = result[i];
@@ -75,7 +74,15 @@ function selectionSortNatur (result){
     ergebnis[1] = result[result.length-2];
     ergebnis[2] = result[result.length-3];
 
-    //console.log(ergebnis);
+    result[result.length-1].anzahl += 1;
+    result[result.length-2].anzahl += 1;
+    result[result.length-3].anzahl += 1;
+
+    console.log(result[result.length-1].anzahl + "jo" +
+      result[result.length-2].anzahl + "hey" +
+      result[result.length-3].anzahl );
+    
+
     return ergebnis;
 }
 
@@ -85,7 +92,7 @@ function selectionSortMiete (result){
   var ergebnis = [];
 
   for (i=0; i<result.length; ++i){
-    //console.log(result[i].allgemeineInfos.mietspiegel);
+    
     minVal = result[minIx=i].allgemeineInfos.mietspiegel;
     for (j= i+1; j<result.length; j++){
       result[j].allgemeineInfos.mietspiegel < minVal && (minVal = result[minIx = j].allgemeineInfos.mietspiegel);
@@ -99,7 +106,11 @@ function selectionSortMiete (result){
   ergebnis[1] = result[1];
   ergebnis[2] = result[2];
 
-  //console.log(ergebnis);
+  result[0].anzahl += 1;
+  result[1].anzahl += 1;
+  result[2].anzahl += 1;
+
+
   return ergebnis;
 }
 
@@ -109,8 +120,8 @@ function selectionSortAktivitaet (result){
   var ergebnis = [];
 
   for (i=0; i<result.length; ++i){
-    //console.log(result[i].aktivitaeten.length);
     minVal = result[minIx=i].aktivitaeten.length;
+    
     for (j= i+1; j<result.length; j++){
       result[j].aktivitaeten.length < minVal && (minVal = result[minIx = j].aktivitaeten.length);
       temp = result[i];
@@ -123,7 +134,10 @@ function selectionSortAktivitaet (result){
   ergebnis[1] = result[result.length-2];
   ergebnis[2] = result[result.length-3];
 
-  //console.log(ergebnis);
+  result[result.length-1].anzahl += 1;
+  result[result.length-2].anzahl += 1;
+  result[result.length-3].anzahl += 1;
+
   return ergebnis;
 }
 
